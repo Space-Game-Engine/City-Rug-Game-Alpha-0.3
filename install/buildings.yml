@@ -1,0 +1,721 @@
+buildings:
+  - id: warehouse
+    name: Central Warehouse
+    role: warehouse
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 10
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 200
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 50
+      - level: 2
+        timeToUpdateBuildingInSeconds: 30
+        requirements:
+          - resourceId: thread
+            cost: 20
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 400
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 120
+      - level: 3
+        timeToUpdateBuildingInSeconds: 60
+        requirements:
+          - resourceId: thread
+            cost: 60
+          - resourceId: paint
+            cost: 25
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 700
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 220
+      - level: 4
+        timeToUpdateBuildingInSeconds: 120
+        requirements:
+          - resourceId: thread
+            cost: 150
+          - resourceId: paint
+            cost: 60
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 1000
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 340
+      - level: 5
+        timeToUpdateBuildingInSeconds: 240
+        requirements:
+          - resourceId: thread
+            cost: 320
+          - resourceId: paint
+            cost: 140
+          - resourceId: blueprints
+            cost: 5
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 1400
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 500
+      - level: 6
+        timeToUpdateBuildingInSeconds: 420
+        requirements:
+          - resourceId: thread
+            cost: 600
+          - resourceId: paint
+            cost: 280
+          - resourceId: blueprints
+            cost: 12
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 1800
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 700
+      - level: 7
+        timeToUpdateBuildingInSeconds: 720
+        requirements:
+          - resourceId: thread
+            cost: 1000
+          - resourceId: paint
+            cost: 600
+          - resourceId: blueprints
+            cost: 28
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 2600
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 1000
+      - level: 8
+        timeToUpdateBuildingInSeconds: 1200
+        requirements:
+          - resourceId: thread
+            cost: 1600
+          - resourceId: paint
+            cost: 1100
+          - resourceId: blueprints
+            cost: 50
+          - resourceId: plastic_parts
+            cost: 40
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 3500
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 1400
+      - level: 9
+        timeToUpdateBuildingInSeconds: 1800
+        requirements:
+          - resourceId: thread
+            cost: 2600
+          - resourceId: paint
+            cost: 2000
+          - resourceId: blueprints
+            cost: 100
+          - resourceId: plastic_parts
+            cost: 120
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 4700
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 1900
+      - level: 10
+        timeToUpdateBuildingInSeconds: 3000
+        requirements:
+          - resourceId: thread
+            cost: 4200
+          - resourceId: paint
+            cost: 3600
+          - resourceId: blueprints
+            cost: 200
+          - resourceId: plastic_parts
+            cost: 300
+        warehouse:
+          - warehouseType: by_resource_type
+            resourceType: construction
+            amount: 6200
+          - warehouseType: by_resource_type
+            resourceType: technology
+            amount: 2600
+  - id: thread_mill
+    name: Thread Mill
+    role: resource
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 5
+        productionRate:
+          - resourceId: thread
+            productionRate: 0.10
+      - level: 2
+        timeToUpdateBuildingInSeconds: 20
+        requirements:
+          - resourceId: thread
+            cost: 30
+        productionRate:
+          - resourceId: thread
+            productionRate: 0.25
+      - level: 3
+        timeToUpdateBuildingInSeconds: 45
+        requirements:
+          - resourceId: thread
+            cost: 80
+        productionRate:
+          - resourceId: thread
+            productionRate: 0.45
+      - level: 4
+        timeToUpdateBuildingInSeconds: 90
+        requirements:
+          - resourceId: thread
+            cost: 150
+          - resourceId: blueprints
+            cost: 1
+        productionRate:
+          - resourceId: thread
+            productionRate: 0.70
+      - level: 5
+        timeToUpdateBuildingInSeconds: 150
+        requirements:
+          - resourceId: thread
+            cost: 220
+          - resourceId: blueprints
+            cost: 2
+        productionRate:
+          - resourceId: thread
+            productionRate: 0.95
+      - level: 6
+        timeToUpdateBuildingInSeconds: 300
+        requirements:
+          - resourceId: thread
+            cost: 360
+          - resourceId: blueprints
+            cost: 4
+        productionRate:
+          - resourceId: thread
+            productionRate: 1.25
+      - level: 7
+        timeToUpdateBuildingInSeconds: 420
+        requirements:
+          - resourceId: thread
+            cost: 520
+          - resourceId: blueprints
+            cost: 8
+        productionRate:
+          - resourceId: thread
+            productionRate: 1.80
+      - level: 8
+        timeToUpdateBuildingInSeconds: 720
+        requirements:
+          - resourceId: thread
+            cost: 900
+          - resourceId: blueprints
+            cost: 16
+        productionRate:
+          - resourceId: thread
+            productionRate: 2.60
+      - level: 9
+        timeToUpdateBuildingInSeconds: 1200
+        requirements:
+          - resourceId: thread
+            cost: 1400
+          - resourceId: blueprints
+            cost: 28
+        productionRate:
+          - resourceId: thread
+            productionRate: 3.60
+      - level: 10
+        timeToUpdateBuildingInSeconds: 2000
+        requirements:
+          - resourceId: thread
+            cost: 2200
+          - resourceId: blueprints
+            cost: 50
+        productionRate:
+          - resourceId: thread
+            productionRate: 5.00
+  - id: paint_workshop
+    name: Paint Workshop
+    role: resource
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 15
+        requirements:
+          - resourceId: thread
+            cost: 50
+        productionRate:
+          - resourceId: paint
+            productionRate: 0.07
+      - level: 2
+        timeToUpdateBuildingInSeconds: 40
+        requirements:
+          - resourceId: thread
+            cost: 120
+          - resourceId: paint
+            cost: 10
+        productionRate:
+          - resourceId: paint
+            productionRate: 0.20
+      - level: 3
+        timeToUpdateBuildingInSeconds: 90
+        requirements:
+          - resourceId: thread
+            cost: 260
+          - resourceId: blueprints
+            cost: 1
+        productionRate:
+          - resourceId: paint
+            productionRate: 0.45
+      - level: 4
+        timeToUpdateBuildingInSeconds: 180
+        requirements:
+          - resourceId: thread
+            cost: 420
+          - resourceId: blueprints
+            cost: 2
+          - resourceId: batteries
+            cost: 10
+        productionRate:
+          - resourceId: paint
+            productionRate: 0.75
+      - level: 5
+        timeToUpdateBuildingInSeconds: 240
+        requirements:
+          - resourceId: thread
+            cost: 600
+          - resourceId: blueprints
+            cost: 4
+        productionRate:
+          - resourceId: paint
+            productionRate: 1.00
+      - level: 6
+        timeToUpdateBuildingInSeconds: 420
+        requirements:
+          - resourceId: thread
+            cost: 800
+          - resourceId: blueprints
+            cost: 8
+          - resourceId: batteries
+            cost: 20
+        productionRate:
+          - resourceId: paint
+            productionRate: 1.50
+      - level: 7
+        timeToUpdateBuildingInSeconds: 480
+        requirements:
+          - resourceId: thread
+            cost: 1200
+          - resourceId: blueprints
+            cost: 12
+        productionRate:
+          - resourceId: paint
+            productionRate: 2.20
+      - level: 8
+        timeToUpdateBuildingInSeconds: 840
+        requirements:
+          - resourceId: thread
+            cost: 2000
+          - resourceId: blueprints
+            cost: 22
+        productionRate:
+          - resourceId: paint
+            productionRate: 3.40
+      - level: 9
+        timeToUpdateBuildingInSeconds: 1400
+        requirements:
+          - resourceId: thread
+            cost: 3000
+          - resourceId: blueprints
+            cost: 40
+        productionRate:
+          - resourceId: paint
+            productionRate: 4.80
+      - level: 10
+        timeToUpdateBuildingInSeconds: 2400
+        requirements:
+          - resourceId: thread
+            cost: 4600
+          - resourceId: blueprints
+            cost: 70
+        productionRate:
+          - resourceId: paint
+            productionRate: 7.00
+  - id: toy_factory
+    name: Toy Factory
+    role: resource
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 60
+        requirements:
+          - resourceId: thread
+            cost: 150
+          - resourceId: paint
+            cost: 50
+          - resourceId: blueprints
+            cost: 2
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 0.12
+      - level: 2
+        timeToUpdateBuildingInSeconds: 180
+        requirements:
+          - resourceId: thread
+            cost: 350
+          - resourceId: paint
+            cost: 120
+          - resourceId: blueprints
+            cost: 6
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 0.35
+      - level: 3
+        timeToUpdateBuildingInSeconds: 360
+        requirements:
+          - resourceId: thread
+            cost: 700
+          - resourceId: paint
+            cost: 260
+          - resourceId: blueprints
+            cost: 12
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 0.90
+      - level: 4
+        timeToUpdateBuildingInSeconds: 600
+        requirements:
+          - resourceId: thread
+            cost: 1100
+          - resourceId: paint
+            cost: 420
+          - resourceId: blueprints
+            cost: 20
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 1.50
+      - level: 5
+        timeToUpdateBuildingInSeconds: 960
+        requirements:
+          - resourceId: thread
+            cost: 1600
+          - resourceId: paint
+            cost: 600
+          - resourceId: blueprints
+            cost: 30
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 2.50
+      - level: 6
+        timeToUpdateBuildingInSeconds: 1320
+        requirements:
+          - resourceId: thread
+            cost: 2400
+          - resourceId: paint
+            cost: 900
+          - resourceId: blueprints
+            cost: 45
+          - resourceId: batteries
+            cost: 40
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 3.50
+      - level: 7
+        timeToUpdateBuildingInSeconds: 1800
+        requirements:
+          - resourceId: thread
+            cost: 3500
+          - resourceId: paint
+            cost: 1400
+          - resourceId: blueprints
+            cost: 70
+          - resourceId: batteries
+            cost: 100
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 5.00
+      - level: 8
+        timeToUpdateBuildingInSeconds: 3000
+        requirements:
+          - resourceId: thread
+            cost: 6000
+          - resourceId: paint
+            cost: 2400
+          - resourceId: blueprints
+            cost: 130
+          - resourceId: batteries
+            cost: 220
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 8.00
+      - level: 9
+        timeToUpdateBuildingInSeconds: 4800
+        requirements:
+          - resourceId: thread
+            cost: 10000
+          - resourceId: paint
+            cost: 4200
+          - resourceId: blueprints
+            cost: 240
+          - resourceId: batteries
+            cost: 480
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 12.00
+      - level: 10
+        timeToUpdateBuildingInSeconds: 7200
+        requirements:
+          - resourceId: thread
+            cost: 16000
+          - resourceId: paint
+            cost: 7000
+          - resourceId: blueprints
+            cost: 420
+          - resourceId: batteries
+            cost: 900
+        productionRate:
+          - resourceId: plastic_parts
+            productionRate: 18.00
+  - id: mini_power_plant
+    name: Mini Power Plant
+    role: resource
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 20
+        productionRate:
+          - resourceId: batteries
+            productionRate: 0.05
+        requirements:
+          - resourceId: thread
+            cost: 70
+          - resourceId: paint
+            cost: 25
+          - resourceId: blueprints
+            cost: 2
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 100
+      - level: 2
+        timeToUpdateBuildingInSeconds: 60
+        requirements:
+          - resourceId: thread
+            cost: 80
+          - resourceId: paint
+            cost: 35
+          - resourceId: blueprints
+            cost: 5
+        productionRate:
+          - resourceId: batteries
+            productionRate: 0.18
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 220
+      - level: 3
+        timeToUpdateBuildingInSeconds: 150
+        requirements:
+          - resourceId: thread
+            cost: 220
+          - resourceId: paint
+            cost: 100
+          - resourceId: blueprints
+            cost: 2
+        productionRate:
+          - resourceId: batteries
+            productionRate: 0.50
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 500
+      - level: 4
+        timeToUpdateBuildingInSeconds: 300
+        requirements:
+          - resourceId: thread
+            cost: 420
+          - resourceId: blueprints
+            cost: 6
+          - resourceId: paint
+            cost: 150
+        productionRate:
+          - resourceId: batteries
+            productionRate: 1.00
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 900
+      - level: 5
+        timeToUpdateBuildingInSeconds: 480
+        requirements:
+          - resourceId: thread
+            cost: 600
+          - resourceId: blueprints
+            cost: 12
+          - resourceId: paint
+            cost: 200
+        productionRate:
+          - resourceId: batteries
+            productionRate: 1.60
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 1500
+      - level: 6
+        timeToUpdateBuildingInSeconds: 900
+        requirements:
+          - resourceId: thread
+            cost: 1000
+          - resourceId: blueprints
+            cost: 28
+          - resourceId: paint
+            cost: 400
+          - resourceId: plastic_parts
+            cost: 20
+        productionRate:
+          - resourceId: batteries
+            productionRate: 2.80
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 2400
+      - level: 7
+        timeToUpdateBuildingInSeconds: 1200
+        requirements:
+          - resourceId: thread
+            cost: 1400
+          - resourceId: blueprints
+            cost: 60
+          - resourceId: plastic_parts
+            cost: 50
+        productionRate:
+          - resourceId: batteries
+            productionRate: 4.00
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 3600
+      - level: 8
+        timeToUpdateBuildingInSeconds: 2200
+        requirements:
+          - resourceId: thread
+            cost: 2600
+          - resourceId: blueprints
+            cost: 120
+          - resourceId: plastic_parts
+            cost: 120
+        productionRate:
+          - resourceId: batteries
+            productionRate: 7.20
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 7000
+      - level: 9
+        timeToUpdateBuildingInSeconds: 3600
+        requirements:
+          - resourceId: thread
+            cost: 4600
+          - resourceId: blueprints
+            cost: 240
+          - resourceId: plastic_parts
+            cost: 260
+        productionRate:
+          - resourceId: batteries
+            productionRate: 11.00
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 12000
+      - level: 10
+        timeToUpdateBuildingInSeconds: 6000
+        requirements:
+          - resourceId: thread
+            cost: 8000
+          - resourceId: blueprints
+            cost: 480
+          - resourceId: plastic_parts
+            cost: 540
+        productionRate:
+          - resourceId: batteries
+            productionRate: 18.00
+        warehouse:
+          - warehouseType: by_resource_id
+            resourceId: batteries
+            amount: 20000
+  - id: city_hall
+    name: City Hall
+    role: technology
+    buildingDetailsAtCertainLevel:
+      - level: 1
+        timeToUpdateBuildingInSeconds: 10
+        productionRate:
+          - resourceId: blueprints
+            productionRate: 0.02
+        requirements:
+          - resourceId: thread
+            cost: 20
+          - resourceId: paint
+            cost: 10
+      - level: 2
+        timeToUpdateBuildingInSeconds: 30
+        requirements:
+          - resourceId: thread
+            cost: 40
+          - resourceId: paint
+            cost: 10
+        productionRate:
+          - resourceId: blueprints
+            productionRate: 0.08
+      - level: 3
+        timeToUpdateBuildingInSeconds: 90
+        requirements:
+          - resourceId: thread
+            cost: 160
+          - resourceId: batteries
+            cost: 20
+          - resourceId: paint
+            cost: 40
+        productionRate:
+          - resourceId: blueprints
+            productionRate: 0.35
+      - level: 4
+        timeToUpdateBuildingInSeconds: 300
+        requirements:
+          - resourceId: thread
+            cost: 420
+          - resourceId: batteries
+            cost: 60
+          - resourceId: paint
+            cost: 200
+          - resourceId: plastic_parts
+            cost: 10
+        productionRate:
+          - resourceId: blueprints
+            productionRate: 1.20
+      - level: 5
+        timeToUpdateBuildingInSeconds: 900
+        requirements:
+          - resourceId: thread
+            cost: 1200
+          - resourceId: batteries
+            cost: 220
+          - resourceId: paint
+            cost: 600
+          - resourceId: plastic_parts
+            cost: 80
+        productionRate:
+          - resourceId: blueprints
+            productionRate: 2

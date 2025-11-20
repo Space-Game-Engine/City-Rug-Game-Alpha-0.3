@@ -1,0 +1,30 @@
+database:
+  type: 'better-sqlite3'
+  host: ''
+  port: ''
+  username: ''
+  password: ''
+  database: 'mydb.db'
+  synchronize: true
+jwt:
+  secret: '7cf882de-9bd4-48f0-b244-cf450c159a05'
+  expiresIn: 3600
+  ignoreExpiration: false
+security:
+  headerTokenToLogin: '5636e864-e448-429d-9fe3-5159e32b2701'
+  whitelistedIp: null
+runtime:
+  habitat:
+    buildingZones:
+      counterForNewHabitat: 10
+      isPossibleToCreateNewZones: true
+    buildingQueue:
+      maxElementsInQueue: 2
+      allowMultipleLevelUpdate: true
+    onStart:
+      resources: []
+      buildings: []
+  mechanics:
+    resources:
+      calculation: 'no-distance-simple-multiply'
+      warehouse: 'base-resource-summary'

@@ -1,0 +1,16 @@
+resources:
+  - id: thread
+    name: Thread
+    type: construction
+  - id: paint
+    name: Paint
+    type: construction
+  - id: plastic_parts
+    name: Plastic parts
+    type: construction
+  - id: batteries
+    name: Batteries
+    type: energy
+  - id: blueprints
+    name: Blueprints
+    type: technology

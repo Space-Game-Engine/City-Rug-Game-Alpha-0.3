@@ -7,8 +7,8 @@ dist/
 *.db
 *.db-shm
 *.db-wal
-install/*
-!install/*.template.yaml
-config/localhost.yaml
+#install/*
+#!install/*.template.yaml
+#config/localhost.yaml
 mydb.db-journal
 test_db.db-journal
